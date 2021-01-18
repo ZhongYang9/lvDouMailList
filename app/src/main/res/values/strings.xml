@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MailList</string>
+    <string name="text_name">姓名</string>
+    <string name="text_call">电话</string>
+    <string name="text_hintName">请输入联系人姓名</string>
+    <string name="text_hintCall">请输入联系人电话</string>
+    <string name="text_add">添加</string>
+    <string name="text_query">查询</string>
+    <string name="text_update">修改</string>
+    <string name="text_del">删除</string>
+</resources>
