@@ -69,6 +69,8 @@ class MainActivity : AppCompatActivity() {
             val db = mHelper.readableDatabase
             /*删除数据*/
             db.delete(Constants.TB_NAME_CALL, "name = ?", arrayOf(name))
+            /*清空输入框内容*/
+            et_contactsName.setText("")
             /*提示用户*/
             Toast.makeText(this, "删除成功", Toast.LENGTH_SHORT).show()
         } else {
@@ -85,6 +87,9 @@ class MainActivity : AppCompatActivity() {
             /*修改操作*/
             val values = contentValuesOf("call" to call)
             db.update(Constants.TB_NAME_CALL, values, "name = ?", arrayOf(name))
+            /*清空输入框内容*/
+            et_contactsCall.setText("")
+            et_contactsName.setText("")
             /*提示用户*/
             Toast.makeText(this, "修改成功", Toast.LENGTH_SHORT).show()
         } else {
@@ -120,6 +125,9 @@ class MainActivity : AppCompatActivity() {
             val db = mHelper.writableDatabase
             val values = contentValuesOf("name" to name, "call" to call)
             db.insert(Constants.TB_NAME_CALL, null, values)
+            /*清空输入框内容*/
+            et_contactsCall.setText("")
+            et_contactsName.setText("")
             /*提示用户*/
             Toast.makeText(this, "添加成功", Toast.LENGTH_SHORT).show()
         } else {
