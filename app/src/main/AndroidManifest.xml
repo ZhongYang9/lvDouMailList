@@ -9,6 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.MailList">
+
+        <provider
+            android:name=".ContactsProvider"
+            android:authorities="com.zhongyang.maillist.provider"
+            android:enabled="true"
+            android:exported="true">
+
+        </provider>
+
         <activity
             android:name=".MainActivity"
             android:windowSoftInputMode="adjustPan|stateHidden">

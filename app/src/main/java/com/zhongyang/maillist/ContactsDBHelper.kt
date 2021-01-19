@@ -20,7 +20,7 @@ class ContactsDBHelper(context: Context, name: String, code: Int) :
 
     override fun onCreate(db: SQLiteDatabase) {
         /*创建数据库时回调此方法*/
-        Log.d(tag, "创建了数据库...")
+//        Log.d(tag, "创建了数据库...")
         /*创建联系人表*/
         val createCallTb = "create table " + Constants.TB_NAME_CALL + " (" +
                 "_id integer primary key autoincrement," +
